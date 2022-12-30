@@ -39,7 +39,7 @@ strong {
     text-decoration: none;
     color: #1fc751;
 }
-a:hover {
+.nav-list a:hover {
     border-bottom: 2px solid rgb(255, 255, 255);
 }
 .foot {
@@ -73,7 +73,26 @@ a:hover {
 .poster h5 {
     color: #6d6958;
 }
+.input-button {
+    border-radius: 5px;
+    background: #1fc751;
+    border: none;
+    padding: 15px;
+    width: 400px;
+}
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.title {
+    text-decoration: none;
+    color: black;
 
+}
+.title:hover {
+    opacity: 0.9;
+}
 @media(max-width: 700px) {
     .card {
         grid-template-columns: repeat(2, 1fr);
