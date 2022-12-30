@@ -6,4 +6,6 @@
         <p>{{ post.qoutes }}</p>
         <h5>{{ post.created_at }}</h5>
     </div>
+    <a href="{% url 'event_edit' post.pk %}">Edit Event</a>
+    <a href="{% url 'event_delete' post.pk %}">Delete Event</a>
 {% endblock content %}

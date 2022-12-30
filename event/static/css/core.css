@@ -35,8 +35,14 @@ strong {
     left: 20px;
     margin-bottom: 20px;
 }
-.nav-list a, .card a {
+.nav-list a{
     text-decoration: none;
+    color: #1fc751;
+}
+.card a {
+    color: #6d6958;
+}
+.card a:hover {
     color: #1fc751;
 }
 .nav-list a:hover {
@@ -53,6 +59,7 @@ strong {
     text-align: center;
     position: absolute;
     bottom: -100px;
+    color: #1fc751;
 }
 /* home */
 .card {
@@ -69,9 +76,14 @@ strong {
     align-items: center;
     align-items: center;
     margin-bottom: 30px;
+    overflow: hidden;
+    padding-bottom: 30px;
 }
 .poster h5 {
     color: #6d6958;
+}
+.poster p {
+    font-size: 14px;
 }
 .input-button {
     border-radius: 5px;
@@ -92,6 +104,10 @@ button {
 }
 .title:hover {
     opacity: 0.9;
+}
+a {
+    text-decoration: none;
+    color: #1fc751;
 }
 @media(max-width: 700px) {
     .card {
