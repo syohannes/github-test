@@ -1,1 +1,0 @@
-web gunicorn event_tracker.wegi:application --log-file -

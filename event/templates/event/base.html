@@ -17,9 +17,19 @@
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'event_new' %}">AddEvent</a></li>
                     <li><a href="">Todo</a></li>
+                    <li><a href="{% url 'login' %}">LogIn</a></li>
                 </ul>
             </nav>
         </header>
+        <section class="login-check">
+            {% if user.is_authenticated %}
+                <h5>Hi {{ user.username }}!</h5>
+                <a href="{% url 'logout' %}">Log out</a>
+            {% else %}
+                <p> You are not logged in. </p>
+                <a href="{% url 'login' %}">Log In</a>
+            {% endif %}
+        </section>
         <section>
             {% block content %}
             {% endblock content %}
