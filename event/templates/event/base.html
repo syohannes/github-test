@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Tracker</title>
+    <link rel="stylesheet" href='{% static "css/core.css" %}''>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a class='title' href="{% url 'home' %}"><h1 class="title">Event<strong class="title2">Tracker</strong></h1></a>
+            <nav class="nav-bar">
+                <ul class="nav-list">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'event_new' %}">AddEvent</a></li>
+                    <li><a href="">Todo</a></li>
+                    <li><a href="{% url 'login' %}">LogIn</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="login-check">
+            {% if user.is_authenticated %}
+                <h5>Hi {{ user.username }}!</h5>
+                <a href="{% url 'logout' %}">Log out</a>
+            {% else %}
+                <p> You are not logged in. </p>
+                <a href="{% url 'login' %}">Log In</a>
+            {% endif %}
+        </section>
+        <section>
+            {% block content %}
+            {% endblock content %}
+        </section>
+        <footer>
+            <div class="foot">
+                <p>Copyright SevenArts Event-Tracker</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
